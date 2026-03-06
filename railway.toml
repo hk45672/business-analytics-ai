@@ -1,0 +1,38 @@
+# Railway Configuration for Business Analytics Platform
+
+# This file tells Railway how to deploy your services
+# Reference: https://docs.railway.app/deploy/config-as-code
+
+services:
+  backend:
+    image: python:3.11-slim
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    port: 8000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    environment:
+      RAIL_VOL: volume
+    volumes:
+      - uploads:/app/uploads
+
+  frontend:
+    image: node:18-alpine
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    port: 3000
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      REACT_APP_API_URL: ${BACKEND_URL:-http://backend:8000}
+
+volumes:
+  uploads:
+    driver: local

@@ -1,0 +1,30 @@
+[tool.pylint.messages_control]
+disable = [
+    "import-error",
+    "missing-module-docstring",
+]
+
+[tool.pylint.master]
+init-hook = 'import sys; sys.path.insert(0, "c:/Users/gaura/OneDrive/Desktop/business-analytics-ai/.venv/Lib/site-packages")'
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["backend", "frontend"]
+exclude = [
+    "**/__pycache__",
+    "**/.*",
+    "**/node_modules",
+    ".venv",
+    "backend/__pycache__",
+    "frontend/node_modules"
+]
+typeCheckingMode = "basic"
+
+[tool.poetry]
+name = "business-analytics-ai"
+version = "0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

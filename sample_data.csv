@@ -1,0 +1,16 @@
+date,revenue,product,region,quantity
+2024-01-01,1000,Product A,North,50
+2024-01-02,1200,Product B,South,60
+2024-01-03,950,Product A,East,45
+2024-01-04,1500,Product C,West,75
+2024-01-05,1100,Product B,North,55
+2024-01-06,1300,Product A,South,65
+2024-01-07,1400,Product C,East,70
+2024-01-08,1600,Product B,West,80
+2024-01-09,1450,Product A,North,72
+2024-01-10,1800,Product C,South,90
+2024-01-11,1550,Product B,East,77
+2024-01-12,1900,Product A,West,95
+2024-01-13,1700,Product C,North,85
+2024-01-14,2000,Product B,South,100
+2024-01-15,1850,Product A,East,92

@@ -1,0 +1,9 @@
+[MASTER]
+init-hook='import sys; sys.path.insert(0, "c:/Users/gaura/OneDrive/Desktop/business-analytics-ai/.venv/Lib/site-packages")'
+
+[MESSAGES CONTROL]
+# Disable import-error since packages are installed in venv
+disable=
+    import-error,
+    too-many-arguments,
+

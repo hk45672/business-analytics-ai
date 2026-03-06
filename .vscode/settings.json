@@ -1,0 +1,14 @@
+{
+  "python.defaultInterpreterPath": "c:/Users/gaura/OneDrive/Desktop/business-analytics-ai/.venv/Scripts/python.exe",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "c:/Users/gaura/OneDrive/Desktop/business-analytics-ai/.venv/Scripts/pylint.exe",
+  "python.linting.pylintArgs": [
+    "--init-hook=import sys; sys.path.insert(0, './.venv/Lib/site-packages')",
+    "--disable=import-error,missing-module-docstring"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": false
+  }
+}
